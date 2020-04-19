@@ -1,0 +1,232 @@
+body {
+  display: grid;
+  justify-content: center;
+  background-image: url("images/wallpaper2.jpg");
+}
+
+h1 {
+  font-family: Pokemon;
+  color: white;
+  font-size: 400%;
+}
+
+h2 {
+  display: grid;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 200%;
+  color: white;
+  font-weight: bold;
+  -webkit-text-stroke: 1px black;
+  justify-content: center;
+  display: inline;
+}
+
+@font-face {
+  font-family: Pokemon;
+  src: url('fonts/Pokemon\ Solid.ttf');
+}
+
+h3 {
+  font-size: 150%;
+  color: white;
+  text-align:center;
+}
+
+h4 {
+  font-size: 120%;
+  color: white;
+  display: inline;
+}
+
+#background{
+  display: grid;
+  justify-content: center;
+}
+
+#tiempo {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 8%);
+}
+
+.reloj {
+  font-size: 200%;
+  color: white;
+}
+
+#botones {
+  display: grid;
+  justify-content: center;
+}
+
+button {
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 100%;
+  color: black;
+  background-color: white;
+  border-radius: 6px;
+  border: 2px solid blueviolet;
+}
+
+button:hover {
+  border: 4px solid violet;
+  font-size: 120%;
+}
+
+#ActualizarButton{
+  color: white;
+  background-color: blueviolet;
+  border: 2px solid black;
+}
+
+#ActualizarButton:hover{
+  border: 4px solid violet;
+}
+
+#borrarButton{
+  color: white;
+  background-color: grey;
+  border: 2px solid black;
+}
+
+#borrarButton:hover{
+  border: 4px solid violet;
+}
+
+#helpButton{
+  color: black;
+  background-color: darkgoldenrod;
+  border: 2px solid black;
+}
+
+#helpButton:hover{
+  border: 4px solid yellow;
+}
+
+#div1 {
+  display: grid;
+  border-radius: 2% 2%;
+}
+
+.container {
+  display: grid;
+  justify-content: space-evenly;
+  grid-gap: 5%;
+}
+
+#Marcador {
+  background: rgba(233, 233, 233, 0.5);
+  border-radius: 20%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+#puntuaciones {
+  overflow: auto;
+  background: rgba(49, 0, 65, 0.89);
+  border-radius: 4%;
+}
+
+.card {
+  position: relative;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  border: 1px solid black;
+  border-radius: 3% 3%;
+}
+
+.card:hover {
+  border: 4px solid violet;
+}
+
+.front,
+.back {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  backface-visibility: hidden;
+  background: white;
+  border-radius: 4% 4%;
+}
+
+.front {
+  transform: rotateX(0deg);
+  z-index: 2;
+  background-image: url("images/reverso.png");
+  color: #FFF;
+  font: 1em/1.8em Arial;
+  display: flex;
+}
+
+img {
+  border-radius: 4% 4%;
+}
+
+.back {
+  transform: rotateX(180deg);
+}
+
+/*Pantallas pequeñas: 1024 píxeles de ancho*/
+@media only screen and (min-width: 1024px) {
+  
+}
+
+/*Pantallas medianas: 1280 píxeles de ancho*/
+@media only screen and (min-width: 1280px) {
+  
+}
+
+/*Pantallas grandes: ancho superior a 1400 píxeles*/
+@media only screen and (min-width: 1400px) {
+  
+}
+
+/*Pantallas más pequeñas*/
+@media only screen and (max-width: 700px) {
+  h1{
+    font-size: 300%;
+    text-align: center;
+  }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Escondido por defecto */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  padding-bottom: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background: rgba(49, 0, 65, 0.89);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid white;
+  width: 80%;
+  text-align: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}

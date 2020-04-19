@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="shortcut icon" type="image/gif" href="./images/gengargif.gif" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="script.js"></script>
+    <!-- CSS de intro.js -->
+    <link rel="stylesheet" type="text/css" href="introjs/introjs.css" />
+    <!-- Bibliotecas javascript -->
+    <script type="text/javascript" src="introjs/intro.js"></script>
+</head>
+
+<body onload="cargarPuntuaciones()">
+
+    <div id="background">
+        <div id="botones">
+            <h1 style="margin: 0px">Pokemon cards</h1>
+            <h3>Seleccione un nivel:</h3>
+            <button onclick="abrirFacil()" id="button16">Fácil</button>
+            <button onclick="abrirMedio()" id="button36">Medio</button>
+            <button onclick="abrirDificil()" id="button64">Difícil</button>
+            <h3>Mejores puntuaciones:</h3>
+
+            <!-- Open The Modal -->
+            <button id="myBtn">Ver</button>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <img src="./images/gengargif.gif" width="8%">
+                    <h1 style="margin: 0px">Puntuaciones</h1>
+                    <div id="puntuaciones">
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Esta parte de funcionalidad de sacar el modal, la hice aquí directamente porque en script.js, no me salía -->
+            <script>
+                var modal = document.getElementById('myModal');
+                var btn = document.getElementById("myBtn");
+                var span = document.getElementsByClassName("close")[0];
+
+                // Abro el modal
+                btn.onclick = function () {
+                    modal.style.display = "block";
+                }
+
+                // Cuando se pulsa la "x" cierro el modal
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+
+                // Cuando se pulsa fuera del modal, cierro el modal
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+
+            </script>
+
+            <button onclick="actualizarStorage()" id="actualizarButton">Actualizar historial</button>
+            <button onclick="borrarStorage()" id="borrarButton">Borrar historial</button>
+            <!-- tour web guide con INTROJS-->
+            <button onclick="startIntro()" id="helpButton">?</button>
+        </div>
+    </div>
+</body>
+</body>
+
+</html>

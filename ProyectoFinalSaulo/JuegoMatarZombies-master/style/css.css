@@ -1,0 +1,111 @@
+/* ----------Fuentes---------- */
+
+@font-face {
+    font-family: "Play";
+    src: url(../Fonts/Play.ttf) format("truetype");
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+    margin: 0;
+}
+
+
+/* ----------Inicio---------- */
+
+.avScore {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.primero {
+    border: 1px solid gold
+}
+
+.segundo {
+    border: 1px solid silver
+}
+
+.tercero {
+    border: 1px solid brown
+}
+
+#iniciarJuego {
+    z-index: 9999999999999999;
+    color: white;
+    width: 300px;
+    display: none;
+    margin: 0 auto;
+    border: solid black 1px;
+}
+
+.contIni {
+    background-image: url("../img/fondoIni.jpg");
+    border: solid black 1px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 1080px;
+    margin: 0 auto;
+    cursor: crosshair;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+button {
+    margin-bottom: 3px;
+    margin-left: 3px;
+}
+
+#botonPlay {
+    font-size: 2.5em;
+    font-family: "Play";
+}
+
+#botonScore {
+    font-size: 1.5em;
+    font-family: "Play";
+}
+
+.sonido {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.toggler {
+    width: 500px;
+    height: 200px;
+    position: relative;
+}
+
+.mounstro {
+    padding: .5em 1em;
+    text-decoration: none;
+}
+
+#effect {
+    width: 240px;
+    height: 170px;
+    padding: 0.4em;
+    position: relative;
+}
+
+#effect h3 {
+    margin: 0;
+    padding: 0.4em;
+    text-align: center;
+}
+
+.ui-effects-transfer {
+    border: 2px dotted gray;
+}

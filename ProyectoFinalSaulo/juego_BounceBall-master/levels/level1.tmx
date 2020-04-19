@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.2" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="64" tileheight="64" infinite="0" nextobjectid="13">
+ <tileset firstgid="1" name="tileset" tilewidth="64" tileheight="64" tilecount="30" columns="5">
+  <image source="../assets/tileset.png" width="320" height="384"/>
+ </tileset>
+ <layer name="field" width="15" height="10">
+  <data encoding="csv">
+7,8,7,8,7,7,7,8,7,7,7,8,7,8,7,
+12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,
+6,9,10,9,10,9,10,9,10,9,10,9,10,9,6,
+6,10,9,10,9,10,9,10,9,10,9,10,9,10,6,
+6,9,10,9,10,9,10,9,10,9,10,9,10,9,6,
+1,10,9,10,9,10,9,10,9,10,9,10,9,10,6,
+1,9,10,9,10,9,10,9,10,9,10,9,10,9,6,
+1,10,9,10,9,10,9,10,9,10,9,10,9,10,6,
+1,9,10,9,10,9,10,9,10,9,10,9,10,9,6,
+4,3,3,3,3,3,3,3,3,3,3,3,3,3,5
+</data>
+ </layer>
+ <objectgroup name="Collisions" visible="0">
+  <object id="12" x="64" y="-1">
+   <polyline points="0,0 1,576 832,577 832,1 896,1 896,641 -64,641 -64,1 0,1"/>
+  </object>
+ </objectgroup>
+ <objectgroup name="spawn">
+  <object id="6" gid="19" x="102" y="493" width="64" height="64"/>
+ </objectgroup>
+</map>

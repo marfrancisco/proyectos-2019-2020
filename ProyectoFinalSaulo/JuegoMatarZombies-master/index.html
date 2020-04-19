@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+    <link rel="stylesheet" href="style/css.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+    <title>Inicio</title>
+</head>
+
+<body>
+    <div id="iniciarJuego">Ya puedes empezar a jugar </div>
+    <div class="juego">
+
+        <div class="contIni">        
+            
+            <button type="button" class="btn btn-outline-danger" id="botonPlay" onclick="play()">Jugar</button>
+            <button type="button" class="btn btn-outline-danger" id="botonScore" data-toggle="modal" data-target="#scoreModal" onclick="Score()">Puntuaciones</button>
+            <div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">SCORES</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Puntuaciones De los Jugadores
+                            <div id="contenedorScore">
+
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="link">
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#SingIn" data-whatever="@fat">Conectarse</button>
+                <div class="modal fade" id="SingIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Conectarse</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label class="col-form-label" for="nombreLogin">Nombre de Usuario</label>
+                                        <input type="text" class="form-control" id="nombreLogin" placeholder="User">
+                                        <label for="PassUsu">Contraseña</label>
+                                        <input type="password" id="PassUsu" class="form-control" aria-describedby="passwordHelpBlock">
+                                        <small id="passwordHelpInline" class="text-muted">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="login()">Conectarse</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#SingUp" data-whatever="@fat">Registrarse</button>
+                <div class="modal fade" id="SingUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Registrarse</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label class="col-form-label" for="UsuarioReg">Nombre de Usuario</label>
+                                        <input type="text" class="form-control" id="UsuarioReg" placeholder="User">
+                                        <label for="PassReg1">Contraseña</label>
+                                        <input type="password" id="PassReg1" class="form-control" aria-describedby="passwordHelpBlock">
+
+                                        <br>
+                                        <br>
+                                        <label for="repPass">Repetir contraseña</label>
+                                        <input type="password" id="repPass" class="form-control" aria-describedby="passwordHelpBlock">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" id='btnReg' onclick="registro()">Registrarse</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#RulesModal">Reglas</button>
+            <div class="modal fade" id="RulesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Reglas del Juego</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <b>Introduccion:</b>
+                            <br> El juego consiste en eliminar al enemigo lo antes posible por cada nivel
+                            <br>
+                            <b>Niveles:</b>
+                            <br> En cada nivel se va aumentando el número de enemigos, para ello contarás con un cargador mas
+                            grande
+                            <br>
+                            <b>Puntuacion:</b>
+                            <br> La puntuación consistirá en el tiempo que tardarás en superar todos los niveles.
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sonido">
+                <img src="img/sonidoOn.png" alt="" value="play" id="play" width="20px">
+                <img src="img/sonidoOff.png" alt="" value="pause" id="pause" width="20px">
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/usuarios.js"></script>
+<script src="js/scores.js"></script>
+<script>
+    window.onload = function () {
+
+        // creamos el objeto audio
+        var audioElement = document.createElement('audio');
+
+        // indicamos el archivo de audio a cargar
+        audioElement.setAttribute('src', 'Sounds/Intro.wav');
+
+        // Si deseamos que una vez cargado empieze a sonar...
+        //audioElement.setAttribute('autoplay', 'autoplay');
+        audioElement.play();
+        document.getElementById("play").addEventListener("click", function () {
+            // Si deseamos que inicie siempre desde el principio
+            //audioElement.currentTime = 0;
+
+            // iniciamos el audio
+            audioElement.play();
+        });
+
+        document.getElementById("pause").addEventListener("click", function () {
+            // hacemos pausa
+            audioElement.pause();
+        });
+    };
+</script>
+<script src="js/jquery.js"></script>
+
+</html>

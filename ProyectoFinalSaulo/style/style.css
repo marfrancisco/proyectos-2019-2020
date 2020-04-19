@@ -1,0 +1,37 @@
+body {
+    background-image: linear-gradient(to right, rgba(83, 98, 165, 0), rgb(76, 153, 240));
+  }
+
+
+  form{
+    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+    border: solid black 1px;
+    border-radius: 1em;
+   
+  }
+
+  input{
+      background-color: rgb(93, 151, 218);
+      border: solid 1px black;
+  }
+
+#center{
+
+    margin-top: 20%;
+    text-align: center;
+  }
+
+  .container-fluid{
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+
+  .footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    background-color: #519CF1;
+  }
